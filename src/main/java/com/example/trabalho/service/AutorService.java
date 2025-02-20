@@ -3,9 +3,11 @@ package com.example.trabalho.service;
 import com.example.trabalho.models.Autor;
 import com.example.trabalho.models.Usuario;
 import com.example.trabalho.repository.AutorRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class AutorService {
 
     private AutorRepository repository;

@@ -1,10 +1,13 @@
 package com.example.trabalho.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor // construtores
+@Data // get set
 @Entity
 public class Emprestimo {
 
@@ -12,5 +15,9 @@ public class Emprestimo {
     @Id
     private int id;
 
-    
+    @OneToOne
+    private Livro livro;
+    @OneToOne
+    private Usuario usuario;
+
 }

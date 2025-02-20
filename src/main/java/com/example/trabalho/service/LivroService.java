@@ -2,9 +2,11 @@ package com.example.trabalho.service;
 
 import com.example.trabalho.models.Livro;
 import com.example.trabalho.repository.LivroRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class LivroService {
     private LivroRepository repository;
 
