@@ -8,16 +8,29 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Representa um autor no sistema.
+ */
 @AllArgsConstructor
-@NoArgsConstructor // construtores
-@Data // get set
+@NoArgsConstructor // Construtores padrão e completo
+@Data // Gera automaticamente os métodos getters, setters, equals, hashCode e toString
 @Entity
 public class Autor {
 
-    @GeneratedValue  (strategy = GenerationType.IDENTITY)
+    /**
+     * Identificador único do autor.
+     */
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
-    private String nome;
-    private String nacionalidade;
 
+    /**
+     * Nome do autor.
+     */
+    private String nome;
+
+    /**
+     * Nacionalidade do autor.
+     */
+    private String nacionalidade;
 }
